@@ -522,17 +522,9 @@ public class EntityTrackerEntry {
                 return packetplayoutspawnentity;
             } else if (this.tracker instanceof EntityEgg) {
                 return new PacketPlayOutSpawnEntity(this.tracker, 62);
-            }
-
-            //fluxspigot invisible tnt //
-            
-            else if (this.tracker instanceof EntityTNTPrimed) {
-                return null;//new PacketPlayOutSpawnEntity(this.tracker, 50);
-            }
-           
-            // fluxspigot invisible tnt //
-
-            else if (this.tracker instanceof EntityEnderCrystal) {
+            } else if (this.tracker instanceof EntityTNTPrimed) {
+                return new PacketPlayOutSpawnEntity(this.tracker, 50);
+            } else if (this.tracker instanceof EntityEnderCrystal) {
                 return new PacketPlayOutSpawnEntity(this.tracker, 51);
             } else if (this.tracker instanceof EntityFallingBlock) {
                 EntityFallingBlock entityfallingblock = (EntityFallingBlock) this.tracker;
